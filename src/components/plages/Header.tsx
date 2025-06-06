@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import logoImg from '/LOGO.webp';
+import Image from 'next/image';
+import logoImg from '../../../public/images/LOGO.webp';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   // Effet pour gérer le changement de fond au scroll
   useEffect(() => {
@@ -23,9 +25,7 @@ const Header: React.FC = () => {
   };
 
   // Fonction pour déterminer si un lien est actif
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const isActive = (path: string) => pathname === path;
 
   return (
     <header 
@@ -36,19 +36,14 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/">
-              <img
-                src={logoImg}
-                alt="Elynor Tours Logo"
-                className="h-10"
-              />
+            <Link href="/">
+              <Image src={logoImg} alt="Elynor Tours Logo" width={120} height={40} className="h-10" />
             </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link 
-              to="/"
+            <Link href="/"
               className={`text-gray-700 hover:text-orange-500 font-medium ${isActive('/') ? 'text-orange-500' : ''}`}
             >
               Accueil
@@ -60,15 +55,13 @@ const Header: React.FC = () => {
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 origin-top-left hidden group-hover:block">
                 {/* Updated path */}
-                <Link 
-                  to="/mediterranean-beaches" 
+                <Link href="/mediterranean-beaches" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500"
                 >
                   Plages Méditerranée
                 </Link>
                 {/* Updated path */}
-                <Link 
-                  to="/dead-sea-beaches" 
+                <Link href="/dead-sea-beaches" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500"
                 >
                   Plages Mer Morte
@@ -76,37 +69,32 @@ const Header: React.FC = () => {
               </div>
             </div>
             
-            <Link 
-              to="/car-rental" 
+            <Link href="/car-rental" 
               className={`text-gray-700 hover:text-orange-500 font-medium ${isActive('/car-rental') ? 'text-orange-500' : ''}`}
             >
               Location Voiture
             </Link>
             
-            <Link 
-              to="/hotel-promotions" 
+            <Link href="/hotel-promotions" 
               className={`text-gray-700 hover:text-orange-500 font-medium ${isActive('/hotel-promotions') ? 'text-orange-500' : ''}`}
             >
               Promotions Hôtels
             </Link>
             
-            <Link 
-              to="/faq" 
+            <Link href="/faq" 
               className={`text-gray-700 hover:text-orange-500 font-medium ${isActive('/faq') ? 'text-orange-500' : ''}`}
             >
               FAQ
             </Link>
             
-            <Link 
-              to="/contact" 
+            <Link href="/contact" 
               className={`text-gray-700 hover:text-orange-500 font-medium ${isActive('/contact') ? 'text-orange-500' : ''}`}
             >
               Contact
             </Link>
 
             {/* Bouton de réservation */}
-            <Link 
-              to="/booking" 
+            <Link href="/booking" 
               className="ml-4 px-5 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-md"
             >
               Réserver
@@ -116,8 +104,7 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Navigation principale sur mobile */}
-            <Link 
-              to="/booking"
+            <Link href="/booking"
               className="px-3 py-1.5 rounded-md text-xs font-medium bg-orange-500 text-white hover:bg-orange-600 transition-colors mr-2 shadow-sm"
             >
               Réserver
@@ -161,8 +148,7 @@ const Header: React.FC = () => {
         </div>
         
         <nav className="flex flex-col px-4 py-2 space-y-2">
-          <Link 
-            to="/" 
+          <Link href="/" 
             className={`py-2 px-3 rounded-md ${isActive('/') ? 'bg-orange-50 text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
             onClick={toggleMenu}
           >
@@ -177,16 +163,14 @@ const Header: React.FC = () => {
             {/* Removed duplicated block above */}
             <div className="pl-4 mt-1 space-y-1">
               {/* Updated path */}
-              <Link 
-                to="/mediterranean-beaches" 
+              <Link href="/mediterranean-beaches" 
                 className="block text-sm text-gray-600 hover:text-orange-500 py-1" 
                 onClick={toggleMenu}
               >
                 Plages Méditerranée
               </Link>
               {/* Updated path */}
-              <Link 
-                to="/dead-sea-beaches" 
+              <Link href="/dead-sea-beaches" 
                 className="block text-sm text-gray-600 hover:text-orange-500 py-1" 
                 onClick={toggleMenu}
               >
@@ -195,32 +179,28 @@ const Header: React.FC = () => {
             </div>
           </div>
           
-          <Link 
-            to="/car-rental" 
+          <Link href="/car-rental" 
             className={`py-2 px-3 rounded-md ${isActive('/car-rental') ? 'bg-orange-50 text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
             onClick={toggleMenu}
           >
             Location Voiture
           </Link>
           
-          <Link 
-            to="/hotel-promotions" 
+          <Link href="/hotel-promotions" 
             className={`py-2 px-3 rounded-md ${isActive('/hotel-promotions') ? 'bg-orange-50 text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
             onClick={toggleMenu}
           >
             Promotions Hôtels
           </Link>
           
-          <Link 
-            to="/faq" 
+          <Link href="/faq" 
             className={`py-2 px-3 rounded-md ${isActive('/faq') ? 'bg-orange-50 text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
             onClick={toggleMenu}
           >
             FAQ
           </Link>
           
-          <Link 
-            to="/contact" 
+          <Link href="/contact" 
             className={`py-2 px-3 rounded-md ${isActive('/contact') ? 'bg-orange-50 text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
             onClick={toggleMenu}
           >

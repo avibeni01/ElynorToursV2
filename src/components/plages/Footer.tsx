@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
-import logoImg from '/LOGO.webp';
+import logoImg from '../../../public/images/LOGO.webp';
 
 const Footer: React.FC = () => {
   return (
@@ -142,9 +143,9 @@ const Footer: React.FC = () => {
               
               <h3 className="text-xl font-bold mb-4">NOS CONSEILS</h3>
               <div className="space-y-2">
-                <Link to="/guides" className="block hover:underline">Guides de voyage</Link>
-                <Link to="/blog" className="block hover:underline">Blog</Link>
-                <Link to="/faq" className="block hover:underline">FAQ</Link>
+                <Link href="/guides" className="block hover:underline">Guides de voyage</Link>
+                <Link href="/blog" className="block hover:underline">Blog</Link>
+                <Link href="/faq" className="block hover:underline">FAQ</Link>
               </div>
             </div>
             
@@ -157,30 +158,30 @@ const Footer: React.FC = () => {
                   <ul className="space-y-2">
                     <li><a href="#services" className="hover:underline">Services</a></li>
                     <li><a href="#destinations" className="hover:underline">Destinations</a></li>
-                    <li><Link to="/booking" className="hover:underline">Réservation</Link></li>
-                    <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+                    <li><Link href="/booking" className="hover:underline">Réservation</Link></li>
+                    <li><Link href="/contact" className="hover:underline">Contact</Link></li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2">Services</h4>
                   <ul className="space-y-2">
                     <li>
-                      <Link to="/hotel-promotions" className="hover:underline text-left">
+                      <Link href="/hotel-promotions" className="hover:underline text-left">
                         Promotions Hôtels
                       </Link>
                     </li>
                     <li>
-                      <Link to="/car-rental" className="hover:underline text-left">
+                      <Link href="/car-rental" className="hover:underline text-left">
                         Location Voiture
                       </Link>
                     </li>
                     <li>
-                      <Link to="/beaches/mediterranean" className="hover:underline text-left">
+                      <Link href="/beaches/mediterranean" className="hover:underline text-left">
                         Plages Méditerranée
                       </Link>
                     </li>
                     <li>
-                      <Link to="/beaches/dead-sea" className="hover:underline text-left">
+                      <Link href="/beaches/dead-sea" className="hover:underline text-left">
                         Plages Mer Morte
                       </Link>
                     </li>
@@ -196,8 +197,14 @@ const Footer: React.FC = () => {
       <div className="bg-white text-gray-600 py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
-            <Link to="/">
-              <img src={logoImg} alt="Elynor Tours" className="h-10 mr-3" />
+            <Link href="/">
+              <Image
+                src={logoImg}
+                alt="Elynor Tours"
+                width={120}
+                height={40}
+                className="h-10 mr-3"
+              />
             </Link>
             <div className="text-center md:text-left">
               <h1 className="text-rose-500 font-bold text-xl">ELYNOR TOURS</h1>
@@ -207,8 +214,8 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-right">
             <p className="text-sm">&copy; 2015-{new Date().getFullYear()} by ELYNORTOURS MARKETING</p>
             <p className="text-sm mt-1">
-              <Link to="/mentions" className="hover:underline">Mentions</Link> – 
-              <Link to="/cguv" className="hover:underline ml-1">CGUV</Link>
+              <Link href="/mentions" className="hover:underline">Mentions</Link> – 
+              <Link href="/cguv" className="hover:underline ml-1">CGUV</Link>
             </p>
           </div>
         </div>

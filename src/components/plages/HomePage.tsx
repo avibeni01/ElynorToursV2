@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Hotel, Car, Umbrella, Phone, Mail, MapPin, Star, ChevronRight, Users, Menu, X } from 'lucide-react';
 import { App as BookingFormContent } from './Formulaire.tsx'; // Importer le contenu du formulaire directement
-import logoImg from '/LOGO.webp';
 import Footer from './Footer';
-import jeruImg from '../immages/jeru.jpg';
-import tlvimg from '../immages/telaviv.jpg';
-import mermorteimg from '../immages/meremorte.jpg';
-import videoHomepage from '../immages/video-homepage.mov';
+import jeruImg from '../../../public/images/jeru.jpg';
+import tlvimg from '../../../public/images/telaviv.jpg';
+import mermorteimg from '../../../public/images/meremorte.jpg';
+import videoHomepage from '../../../public/images/video-homepage.mov';
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState('hotel');
@@ -311,7 +310,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <p className="text-gray-600 mb-4">
                   La ville sainte, riche en histoire et en culture.
                 </p>
-                <Link to="/destinations/jerusalem" className="text-orange-500 font-medium flex items-center hover:text-orange-600">
+                <Link href="/destinations/jerusalem" className="text-orange-500 font-medium flex items-center hover:text-orange-600">
                   Explorer <ChevronRight size={18} className="ml-1" />
                 </Link>
               </div>
@@ -369,7 +368,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           </div>
           
           <div className="text-center mt-8">
-            <Link to="/destinations" className="inline-block px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
+            <Link href="/destinations" className="inline-block px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
               Voir toutes les destinations
             </Link>
           </div>

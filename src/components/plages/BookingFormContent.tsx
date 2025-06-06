@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Hotel, Car, Umbrella } from 'lucide-react';
 
 interface BookingFormContentProps {
@@ -76,14 +76,14 @@ const BookingFormContent: React.FC<BookingFormContentProps> = ({ initialActiveTa
             Explorez les plus belles plages d'Israël et découvrez nos excursions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
-            <Link 
-              to="/mediterranean-beaches"
+            <Link
+              href="/mediterranean-beaches"
               className="px-6 py-3 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-600 transition-colors"
             >
               Plages Méditerranée
             </Link>
-            <Link 
-              to="/dead-sea-beaches"
+            <Link
+              href="/dead-sea-beaches"
               className="px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
             >
               Plages Mer Morte

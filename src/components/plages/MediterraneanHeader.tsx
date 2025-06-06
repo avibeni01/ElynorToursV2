@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import logoImg from '/LOGO.webp';
+import Image from 'next/image';
+import logoImg from '../../../public/images/LOGO.webp';
 
 // Remove the interface and prop
 // interface MediterraneanHeaderProps {
@@ -37,12 +38,8 @@ const MediterraneanHeader: React.FC = (/* { onSwitchApp } */) => { // Removed em
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           {/* Use Link for logo */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={logoImg}
-              alt="Elynor Tours Logo"
-              className="h-10"
-            />
+          <Link href="/" className="flex items-center">
+            <Image src={logoImg} alt="Elynor Tours Logo" width={120} height={40} className="h-10" />
           </Link>
           
           {/* Desktop Navigation */}
@@ -62,7 +59,7 @@ const MediterraneanHeader: React.FC = (/* { onSwitchApp } */) => { // Removed em
                   Plages religieuses séparées
                 </a>
                 {/* Link to Dead Sea page */}
-                <Link to="/dead-sea-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
+                <Link href="/dead-sea-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
                   Plages de la Mer Morte
                 </Link>
               </div>
@@ -186,7 +183,7 @@ const MediterraneanHeader: React.FC = (/* { onSwitchApp } */) => { // Removed em
                 Plages religieuses séparées
               </a>
               {/* Link to Dead Sea page in mobile menu */}
-              <Link to="/dead-sea-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
+              <Link href="/dead-sea-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
                 Plages de la Mer Morte
               </Link>
             </div>
@@ -198,7 +195,7 @@ const MediterraneanHeader: React.FC = (/* { onSwitchApp } */) => { // Removed em
             Transport
           </a>
           {/* Add FAQ Link Mobile Menu */}
-          <Link to="/faq" onClick={toggleMenu} className="text-gray-700 hover:text-orange-500 py-1 text-left w-full">
+          <Link href="/faq" onClick={toggleMenu} className="text-gray-700 hover:text-orange-500 py-1 text-left w-full">
             FAQ
           </Link>
           {/* Mobile App Switcher Links are outside the dropdown menu */}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import logoImg from '/LOGO.webp';
+import Image from 'next/image';
+import logoImg from '../../../public/images/LOGO.webp';
 
 interface HeaderProps {}
 
@@ -39,9 +40,11 @@ const Header: React.FC<HeaderProps> = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => navigateTo('')}>
             <a>
-              <img
+              <Image
                 src={logoImg}
                 alt="Elynor Tours Logo"
+                width={120}
+                height={40}
                 className="h-10"
               />
             </a>
