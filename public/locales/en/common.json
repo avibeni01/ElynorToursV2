@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Travel at the best price with",
+    "brand": "Elynor Tours",
+    "subtitle": "Car Rental & Hotels Specialist since 2015",
+    "description": "ElynorTours guarantees you the best hotel and car rental rates mainly in Europe but also elsewhere in the world.",
+    "cta": {
+      "car": "Book a car",
+      "hotel": "Find a hotel"
+    }
+  },
+  "values": {
+    "title": "Search, compare, save",
+    "confidentiality": "Confidentiality",
+    "serenity": "Serenity",
+    "custom": "Tailor-made",
+    "international": "International",
+    "enjoy": {
+      "title": "Enjoy your trip",
+      "description": "We take care of negotiating the best car rental and hotel booking offers for you",
+      "cta": "GET IN TOUCH"
+    }
+  },
+  "booking": {
+    "title": "Online Booking",
+    "subtitle": "Book your accommodation and services in just a few clicks",
+    "tabs": {
+      "hotel": "Hotel Booking",
+      "car": "Car Rental"
+    },
+    "hotel": {
+      "destination": "Destination (city, hotel...)",
+      "dates": "Select your dates",
+      "rooms": "rooms",
+      "adults": "adults",
+      "children": "children",
+      "babies": "babies",
+      "stars": "Number of stars",
+      "options": {
+        "title": "Hotel options",
+        "pool": "Pool",
+        "breakfast": "Breakfast",
+        "nearBeach": "Near the beach"
+      },
+      "specificHotel": "Do you have a specific hotel in mind?",
+      "hotelNamePlaceholder": "Hotel name (optional)"
+    },
+    "car": {
+      "country": "Country",
+      "station": "Station",
+      "pickupDate": "Pickup/Return Dates",
+      "pickupTime": "Pickup time",
+      "returnTime": "Return time",
+      "driverAge": "Driver's age",
+      "hasVisa": "Do you have a Visa Premier?",
+      "shabbat": "Do you drive during Shabbat?",
+      "yes": "Yes",
+      "no": "No",
+      "selectVehicle": "Select your vehicle"
+    },
+    "contact": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "notes": "Notes or remarks (optional)"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "submit": "Send request",
+      "search": "Search"
+    },
+    "messages": {
+      "success": "Thank you! Your request has been sent.",
+      "contact": "We will contact you soon.",
+      "whatsapp": "Click the button below to open WhatsApp and confirm your request:",
+      "openWhatsapp": "Open WhatsApp",
+      "newRequest": "Make a new request"
+    }
+  }
+}

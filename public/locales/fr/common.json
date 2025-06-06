@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Voyagez au meilleur prix avec",
+    "brand": "Elynor Tours",
+    "subtitle": "Spécialiste Location Voiture & Hôtels depuis 2015",
+    "description": "ElynorTours vous garantit les meilleurs tarifs hôtels et location de voiture principalement en Europe mais aussi ailleurs dans le monde.",
+    "cta": {
+      "car": "Réserver une voiture",
+      "hotel": "Trouver un hôtel"
+    }
+  },
+  "values": {
+    "title": "Cherchez, comparez, économisez",
+    "confidentiality": "Confidentialité",
+    "serenity": "Sérénité",
+    "custom": "Sur mesure",
+    "international": "International",
+    "enjoy": {
+      "title": "Profitez de votre voyage",
+      "description": "On s'occupe de négocier pour vous les meilleures offres de location voiture et réservation d'hôtels",
+      "cta": "PRENDRE CONTACT"
+    }
+  },
+  "booking": {
+    "title": "Réservation en ligne",
+    "subtitle": "Réservez votre hébergement et vos services en quelques clics",
+    "tabs": {
+      "hotel": "Réservation Hôtel",
+      "car": "Location Voiture"
+    },
+    "hotel": {
+      "destination": "Destination (ville, hôtel...)",
+      "dates": "Sélectionnez vos dates",
+      "rooms": "chambres",
+      "adults": "adultes",
+      "children": "enfants",
+      "babies": "bébés",
+      "stars": "Nombre d'étoiles",
+      "options": {
+        "title": "Options de l'hôtel",
+        "pool": "Piscine",
+        "breakfast": "Petit-déjeuner",
+        "nearBeach": "Proche de la mer"
+      },
+      "specificHotel": "Avez-vous une idée d'hôtel en particulier ?",
+      "hotelNamePlaceholder": "Nom de l'hôtel (facultatif)"
+    },
+    "car": {
+      "country": "Pays",
+      "station": "Station",
+      "pickupDate": "Dates Prise/Retour",
+      "pickupTime": "Heure départ",
+      "returnTime": "Heure retour",
+      "driverAge": "Âge du conducteur",
+      "hasVisa": "Avez-vous une Visa Première ?",
+      "shabbat": "Roulez-vous pendant Chabbat ?",
+      "yes": "Oui",
+      "no": "Non",
+      "selectVehicle": "Sélectionnez votre véhicule"
+    },
+    "contact": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "notes": "Notes ou remarques (facultatif)"
+    },
+    "buttons": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "submit": "Envoyer la demande",
+      "search": "Rechercher"
+    },
+    "messages": {
+      "success": "Merci ! Votre demande a été envoyée.",
+      "contact": "Nous vous contacterons bientôt.",
+      "whatsapp": "Cliquez sur le bouton ci-dessous pour ouvrir WhatsApp et confirmer votre demande :",
+      "openWhatsapp": "Ouvrir WhatsApp",
+      "newRequest": "Faire une nouvelle demande"
+    }
+  }
+}
